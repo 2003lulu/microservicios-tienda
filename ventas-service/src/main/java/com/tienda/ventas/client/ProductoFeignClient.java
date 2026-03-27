@@ -1,4 +1,3 @@
-
 package com.tienda.ventas.client;
 
 import com.tienda.ventas.dto.ProductoDTO;
@@ -8,7 +7,7 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "producto-service")
+@FeignClient(name = "producto-service", url = "http://localhost:8082")
 public interface ProductoFeignClient {
 
     @GetMapping("/api/productos/{id}")

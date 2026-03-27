@@ -26,7 +26,6 @@ public class DetalleTicketService {
         dto.setCantidad(detalle.getCantidad());
         dto.setPrecioUnitario(detalle.getPrecioUnitario());
         dto.setSubtotal(detalle.getSubtotal());
-
         return dto;
     }
 }

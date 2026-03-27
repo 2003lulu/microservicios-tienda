@@ -18,31 +18,8 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    fetch-registry: true
-    register-with-eureka: true
-  instance:
-    hostname: localhost
-
 management:
   endpoints:
     web:
       exposure:
         include: health,info,metrics
-
-resilience4j:
-  circuitbreaker:
-    instances:
-      producto-service:
-        register-health-indicator: true
-        sliding-window-size: 10
-        failure-rate-threshold: 50
-        wait-duration-in-open-state: 5s
-      cliente-service:
-        register-health-indicator: true
-        sliding-window-size: 10
-        failure-rate-threshold: 50
-        wait-duration-in-open-state: 5s
