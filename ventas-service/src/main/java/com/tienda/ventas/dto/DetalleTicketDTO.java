@@ -12,4 +12,5 @@ public class DetalleTicketDTO {
     private Integer cantidad;
     private BigDecimal precioUnitario;
     private BigDecimal subtotal;
+
 }
