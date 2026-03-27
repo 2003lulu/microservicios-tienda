@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "producto-service")
+@FeignClient(name = "producto-service", contextId = "productoFeignClient", url = "http://localhost:8082")
 public interface ProductoFeignClient {
 
     @GetMapping("/api/productos/{id}")
@@ -15,4 +15,5 @@ public interface ProductoFeignClient {
 
     @PatchMapping("/api/productos/{id}/stock")
     void actualizarStock(@PathVariable("id") Long id, @RequestParam("cantidad") Integer cantidad);
+
 }
